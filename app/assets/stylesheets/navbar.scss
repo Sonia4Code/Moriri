@@ -1,0 +1,64 @@
+
+.navbar{
+	background: #0E2A36;
+}
+
+#logo {
+  width: 100%;
+  max-width: 60px;
+  height: 100%;
+  border: 1px solid white;
+  border-radius: 50%;
+  background: image-url('pattern.png');
+}
+
+#wordmark{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+}
+
+
+#drop_image {
+  width: 100%;
+  max-width: 60px;
+  height: 100%;
+  border: 1px solid white;
+  border-radius: 50%;
+  background-color: yellow;
+  margin-right: 1rem;
+  margin-left: 0;
+  padding: 0;
+}
+
+#dropdown {
+   background: #0E2A36;
+   border-radius: 50%;
+   border:none;
+   padding: 0;
+   margin: 0;
+}
+
+/* FOOTER*/
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background: #0E2A36;
+   color: white;
+   text-align: center;
+}
+
+
+#foot {
+padding-bottom:0;
+display:flex;
+align-content:center;
+justify-content:center;
+align-items:center;
+}

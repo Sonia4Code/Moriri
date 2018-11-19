@@ -10,6 +10,36 @@
   </head>
 
   <body>
+    <!-- NAVBAR -->
+<nav class="navbar fixed-top navbar-expand-md">
+  <a href="#" class="col-xs-4 navbar-brand"><%= link_to(image_tag("logo_avatar.png", class:"brands", id: "logo", title: "Home"), root_path) %></a>
+  <ul class=" col-xs-4 navbar-nav mx-auto" id="wordmark_ul">
+    <li class="nav-item"><a href="#" class="nav-link"><%= image_tag("wordmark.png", id:"img-wordmark") %></a></li>
+  </ul>
+  <!-- DROPDOWN -->
+ 
+  <div class="btn-group dropleft">
+  <button type="button" class="btn btn-secondary dropdown-toggle"  id="dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+     <a href="#" class="col-xs-4" id=wmul><%= link_to(image_tag("logo_avatar.png", class:"brands", id: "drop_image", title: "Home"), root_path) %></a>
+  </button>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
+
+</nav>
+ <!-- NAVBAR END -->
+
+
     <%= yield %>
+
+<div class="footer">
+  <p id="foot"> ©Moriri 2018</p>
+</div>
+
+
+
   </body>
 </html>

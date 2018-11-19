@@ -1,29 +1,10 @@
-<div class="jumbotron text-center">
-  <h1>My First Bootstrap Page</h1>
-  <p>Resize this responsive page to see the effect!</p> 
-</div>
-  
-<div class="container">
-  <div class="row">
-    <div class="col-sm-4">
-      <h3>Column 1</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-    </div>
-    <div class="col-sm-4">
-      <h3>Column 2</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-    </div>
-    <div class="col-sm-4">
-      <h3>Column 3</h3>        
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-    </div>
+<div class="jumbotron text-center jumbotron-fluid">
+  <div class="container-fluid" id="welcome_con">
+	<%= image_tag("logo.png", id: "home_logo", class:"img-fluid") %> 
+	  <!-- SLOGAN -->
+	  <p id="slogan" style="font-family: 'Oswald',serif;font-size: 2em;color: white; text-shadow:-1px -1px 0 #0E2A36, 1px -1px 0 #0E2A36,-1px 1px 0 #0E2A36, 1px 1px 0 #0E2A36;">Get your hair done all around the world! </p>
+	  <!-- SEARCH BOX -->
+	    <input type="text" placeholder="Search.."> 
   </div>
 </div>
-
-</body>
-</html>
-
 
