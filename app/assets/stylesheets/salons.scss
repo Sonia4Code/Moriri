@@ -1,0 +1,54 @@
+/* NEW FORM */
+#new-salon {
+	width: 55%;
+}
+
+h2#salon-form-head{
+	border: solid 5px #0E2A36;
+	background: image-url('pattern.png');
+	border-radius: 5px;
+	color: white;
+	width: 100%;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.form_label {
+	text-align: right;
+}
+
+label {
+	margin: 0 0 0 0;
+	color: #0E2A36;
+	font-weight: bold;
+	font-family: "Sans-serif", "Work Sans", serif;
+	font-size: 18px;
+	vertical-align: middle;
+
+}
+
+div#new-salon{
+	text-align: center;
+	padding-bottom: 15vh;
+	padding-top: 15vh;
+}
+
+div#speciality.form-row {
+	border: 5px black;
+}
+
+input.btn {
+	background-color: #0E2A36;
+	color: white;
+	border: solid 1px grey;
+
+}
+
+
+/*SHOW PAGE*/
+
+div#show-page{
+	text-align: center;
+	padding-bottom: 15vh;
+	padding-top: 15vh;
+}

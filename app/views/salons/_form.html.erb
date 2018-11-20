@@ -1,0 +1,60 @@
+<div class="form-group">
+    <%= label_tag :business_name, 'Salon' %>
+     <%= f.text_field :business_name, class: 'form-control', placeholder: 'Salon' %>
+  </div>
+    <div class="form-row">
+    <div class="form-group col-md-6">
+      <%= label_tag :contact, 'Contact Number' %>
+      <%= f.text_field  :contact, class: 'form-control', placeholder: 'Contact Number' %>
+    </div>
+    <div class="form-group col-md-6">
+      <%= label_tag :contact_person, 'Contact Person' %>
+      <%= f.text_field  :contact_person, class: 'form-control', placeholder: 'Contact Person' %>
+    </div>
+  </div>
+ 
+  <div class="form-row">
+    <div class="form-group col-md-4">
+      <%= label_tag :country, 'Country' %>
+      <%= f.text_field  :country, class: 'form-control', placeholder: 'Country' %>
+    </div>
+    <div class="form-group col-md-4">
+      <%= label_tag :location, 'City / Town' %>
+      <%= f.text_field  :location, class: 'form-control', placeholder: 'City / Town' %>
+    </div>
+    <div class="form-group col-md-4">
+      <%= label_tag :area, 'Suburb' %>
+      <%= f.text_field  :suburb, class: 'form-control', placeholder: 'Suburb' %>
+    </div>
+  </div>
+   <div class="form-group">
+     <%= label_tag :address, 'Address' %>
+      <%= f.text_field  :address, class: 'form-control', placeholder: 'Address' %>
+  </div>
+<!-- Speciality -->
+
+ <div class="form-row" id="speciality">
+  <div class="form-group col-md-2">
+      <%= label_tag :speciality, 'Speciality' %>
+    </div>
+    <div class="form-group col-md-2">
+      <%= f.check_box :speciality, {multiple: true}, "Natural Hair", nil %>
+      <h8>Natural Hair</h8>
+    </div>
+    <div class="form-group col-md-2">
+      <%= f.check_box :speciality, {multiple: true}, "Relaxed Hair", nil %>
+      Relaxed Hair
+    </div>
+    <div class="form-group col-md-2">
+      <%= f.check_box :speciality, {multiple: true}, "Braids", nil %>
+      Braids
+    </div>
+    <div class="form-group col-md-2">
+      <%= f.check_box :speciality, {multiple: true}, "Weaves", nil %>
+      Weaves
+    </div>
+    <div class="form-group col-md-2">
+      <%= f.check_box :speciality, {multiple: true}, "Dreadlocs", nil %>
+      'Locs
+    </div>
+  </div>
