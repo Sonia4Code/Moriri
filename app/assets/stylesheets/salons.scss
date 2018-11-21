@@ -1,16 +1,31 @@
+/* SEARCH */
+div.search {
+	text-align: center;
+	/*background: image-url('pattern.png'); */
+	/*border: solid 5px #0E2A36;*/
+}
+
+#search-form {
+	border-radius: 5px;
+}
 /* NEW FORM */
 #new-salon {
 	width: 55%;
 }
 
-h2#salon-form-head{
+h2#salon-form-head {
 	border: solid 5px #0E2A36;
-	background: image-url('pattern.png');
+	background: image-url('pattern.png'); 
 	border-radius: 5px;
 	color: white;
 	width: 100%;
+	text-align: center;
 	padding-left: 0;
 	padding-right: 0;
+	font-family: 'Oswald',serif;
+	font-size: 2em;
+	color: white; 
+	text-shadow:-1px -1px 0 #0E2A36, 1px -1px 0 #0E2A36,-1px 1px 0 #0E2A36, 1px 1px 0 #0E2A36;
 }
 
 .form_label {
@@ -24,7 +39,6 @@ label {
 	font-family: "Sans-serif", "Work Sans", serif;
 	font-size: 18px;
 	vertical-align: middle;
-
 }
 
 div#new-salon{
@@ -41,12 +55,9 @@ input.btn {
 	background-color: #0E2A36;
 	color: white;
 	border: solid 1px grey;
-
 }
 
-
 /*SHOW PAGE*/
-
 div#show-page{
 	text-align: center;
 	padding-bottom: 15vh;
@@ -61,5 +72,44 @@ div#show-salon.container-fluid {
 #map {
 	height: 550px;
 	width: 100%;
+}
+
+/* INDEX */
+div#index.container-fluid {
+	padding-bottom: 15vh;
+	padding-top: 10vh;
+}
+
+a {
+	color: white;
+    text-decoration: underline;
+}
+
+p.card-text {
+	text-align: center;
+}
+
+div.card{
+	width: 350px;
+	height: 250px;
+	border: solid 2px #0E2A36;
+}
+
+div.card-header {
+	border: solid 2px #0E2A36;
+	background: image-url('pattern.png');
+	border-radius: 5px;
+	color: white;
+	width: 100%;
+	text-align: center;
+	padding: 0 0 0 0;
+	font-family: 'Oswald',serif;
+	font-size: 2em;
+	color: white; 
+	text-shadow:-1px -1px 0 #0E2A36, 1px -1px 0 #0E2A36,-1px 1px 0 #0E2A36, 1px 1px 0 #0E2A36;
+}
+
+div#sal-row {
+	margin-bottom: 50px;
 }
 

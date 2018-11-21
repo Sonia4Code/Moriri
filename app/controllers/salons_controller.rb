@@ -49,7 +49,7 @@ class SalonsController < ApplicationController
         if @salons.empty?
           flash[:notice] = "Sorry there are no results for your search"
         end
-        @salons = @salons.page(params[:page])
+        # @salons = @salons.page(params[:page])
         respond_to do |format|
           format.js
           format.html {render "index"}

@@ -1,15 +1,16 @@
+<!-- SHOW PAGE -->
 <div class="container-fluid" id="show-page">
     <div class="row">
         <div class="col-lg-6">
             <div class="salon-header">
-	 			<h2 id="salon-form-head" style="font-family: 'Oswald',serif;font-size: 2em;color: white; text-shadow:-1px -1px 0 #0E2A36, 1px -1px 0 #0E2A36,-1px 1px 0 #0E2A36, 1px 1px 0 #0E2A36;"><%= @salon.business_name %></h2>
+	 			<h2 id="salon-form-head"><%= @salon.business_name %></h2>
 			</div>   
         	<div class="info">
         		<p><%= label_tag :contact, 'Contact Number:' %> <%= @salon.contact %></p>
 		        <p><%= label_tag :contact_person, 'Contact Person:' %> <%= @salon.contact_person %></p>
 		        <p><%= label_tag :country, 'Country:' %> <%= @salon.country %></p>
 		        <p><%= label_tag :location, 'City / Town:' %> <%= @salon.location %> </p>
-		        <p><%= label_tag :area, 'Suburb:' %> <%= @salon.suburb %> </p>
+		        <p><%= label_tag :area, 'Area:' %> <%= @salon.suburb %> </p>
 		        <p><%= label_tag :address, 'Address:' %> <%= @salon.address %> </p>
 		        <p><%= label_tag :speciality, 'Speciality:' %><%= @salon.speciality * "," %></p>
 	            <p class= 'show-button'><%= button_to "Edit", edit_salon_path(@salon), :method => "get", class: "btn" %></p>
