@@ -3,8 +3,14 @@
 	<%= image_tag("logo.png", id: "home_logo", class:"img-fluid") %> 
 	  <!-- SLOGAN -->
 	  <p id="slogan" style="font-family: 'Oswald',serif;font-size: 2em;color: white; text-shadow:-1px -1px 0 #0E2A36, 1px -1px 0 #0E2A36,-1px 1px 0 #0E2A36, 1px 1px 0 #0E2A36;">Get your hair done all around the world! </p>
-	  <!-- SEARCH BOX -->
-	    <input type="text" placeholder="Search.."> 
+        <!-- SEARCH BOX -->
+      <p>
+        <%= form_tag(salons_search_path, id: "search-form", method: :get) do %>
+           <%= text_field_tag :location, params[:location], placeholder: ' City', class:"search_field" %>
+            <%= submit_tag 'Find Salon', name: nil, class:"btn", id:"search_btn"%>
+         <% end %>
+      </p>
   </div>
 </div>
+
 

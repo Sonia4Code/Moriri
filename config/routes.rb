@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
 	post "salons/search" => "salons#search"
-  get "salons/search"
+  # get "salons/search"
 
   
 	get "/login" => "sessions#new"
