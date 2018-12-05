@@ -7,7 +7,7 @@
       <p>
         <%= form_tag(salons_search_path, id: "search-form", method: :get) do %>
            <%= text_field_tag :location, params[:location], placeholder: ' City', class:"search_field" %>
-            <%= submit_tag 'Find Salon', name: nil, class:"btn", id:"search_btn"%>
+            <%= submit_tag 'Search', name: nil, class:"btn", id:"search_btn"%>
          <% end %>
       </p>
   </div>

@@ -1,10 +1,9 @@
 Rails.application.routes.draw do
-  get 'welcome/index'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  post "salons/search" => "salons#search"
+  get "salons/search" => "salons#search"
+
   root 'welcome#index'
 
-	post "salons/search" => "salons#search"
-  # get "salons/search"
 
   
 	get "/login" => "sessions#new"

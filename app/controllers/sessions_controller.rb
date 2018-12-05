@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
       flash[:success] = "Welcome Back"      
       redirect_to root_url
     else 
-      flash[:error] = "Invalid email/password combination" 
+      flash[:danger] = "Invalid email/password combination" 
     end
   end
 

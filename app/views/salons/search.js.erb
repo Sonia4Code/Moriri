@@ -1,2 +1,5 @@
 $("#search_list").html("");
 $("<%= j render(partial:'display', object: @salons)%>").appendTo("#search_list");
+$("#alert").html("<%= flash[:notice] %>");
+
+

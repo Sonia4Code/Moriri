@@ -14,10 +14,10 @@ class SalonsController < ApplicationController
     @salon = Salon.new(salon_params)
     # @salon.user_id = current_user.id
       if @salon.save
-        flash[:notice] = 'You have successfully listed your services!'
+        flash[:success] = 'You have successfully listed your services!'
         redirect_to @salon
       else
-        flash[:notice] = 'Something went wrong with salon your services!'
+        flash[:danger] = 'Something went wrong with salon your services!'
         redirect_to new_salon_path(@salon)
       end
   end   
@@ -47,7 +47,7 @@ class SalonsController < ApplicationController
       filtering_params(params).each do |key,value|
         @salons = @salons.public_send(key, value) if value.present?
         if @salons.empty?
-          flash[:notice] = "Sorry there are no results for your search"
+          flash.now[:notice] = "Sorry there are no results for your search. Try again."
         end
         # @salons = @salons.page(params[:page])
         respond_to do |format|
@@ -60,11 +60,11 @@ class SalonsController < ApplicationController
 private
 
   def salon_params
-    params.require(:salon).permit(:page, :country, :location, :title, :description, :business_name, :contact,:contact_person, :suburb, :address, speciality:[] )
+    params.require(:salon).permit(:id, :page, :country, :location, :title, :description, :business_name, :contact,:contact_person, :suburb, :address, speciality:[] )
   end
 
   def set_salon
-    @salon = Salon.find(params[:id])
+      @salon = Salon.find(params[:id]) 
   end
 
   def filtering_params(params)
