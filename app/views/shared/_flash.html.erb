@@ -1,5 +1,5 @@
 <div class="container-fluid" id='alert' role='alert'>
-  <% flash.each do |key, value| %>
+  <% flash do |key, value| %>
   <%# flash.each do |key, value| %>
     <div class="alert-<%= flash_class(key) %>">
       <%= value %>

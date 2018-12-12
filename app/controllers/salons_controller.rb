@@ -2,8 +2,7 @@ class SalonsController < ApplicationController
 	  before_action :set_salon, only: [:show, :edit, :update, :destroy]
   
   def index
-    @salons = Salon.all
-    # .order("created_at DESC").page(params[:page])
+    @salons = Salon.all.order("created_at DESC").page(params[:page])
   end
 
   def new
@@ -49,7 +48,7 @@ class SalonsController < ApplicationController
         if @salons.empty?
           flash.now[:notice] = "Sorry there are no results for your search. Try again."
         end
-        # @salons = @salons.page(params[:page])
+        @salons = @salons.page(params[:page])
         respond_to do |format|
           format.js
           format.html {render "index"}

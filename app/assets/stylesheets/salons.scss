@@ -84,7 +84,7 @@ div#show-salon.container-fluid {
 
 /* INDEX */
 div#index.container-fluid {
-	padding-bottom: 15vh;
+	padding-bottom: 5vh;
 	padding-top: 10vh;
 }
 
@@ -99,7 +99,7 @@ p.card-text {
 
 div.card{
 	width: 350px;
-	height: 250px;
+	height: 280px;
 	border: solid 2px #0E2A36;
 }
 
@@ -117,7 +117,37 @@ div.card-header {
 	text-shadow:-1px -1px 0 #0E2A36, 1px -1px 0 #0E2A36,-1px 1px 0 #0E2A36, 1px 1px 0 #0E2A36;
 }
 
-div#sal-row {
-	margin-bottom: 50px;
+
+a:visted {
+  color: #091a22;
 }
 
+a:hover {
+  color: #0E2A36;
+}
+
+
+
+/* PAGINATION */
+
+a.page-link {
+  background-color: white;
+  border: 0px;
+  color: #696969;
+  text-align: center;
+  text: 5px;
+  font-weight: bold;
+  border: solid 1px #0E2A36;
+}
+
+a.page-link:hover {
+  background-color: #0E2A36;
+  color: white;
+}
+
+li.page-item.active a.page-link {
+  background-color: #0E2A36;
+  color: white;
+  border-color: #0E2A36;
+  
+}

@@ -5,4 +5,6 @@ class Salon < ApplicationRecord
   scope :location, -> (location) { where("location ILIKE ?", "%#{location}%") } 
   scope :suburb, -> (suburb) { where("suburb ILIKE ?", "%#{suburb}%") } 
 
+  paginates_per 8
+
 end
