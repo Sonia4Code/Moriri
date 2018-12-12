@@ -20,12 +20,27 @@
    
     <div class="btn-group dropleft">
     <button type="button" class="btn btn-secondary dropdown-toggle"  id="dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-       <a href="#" class="col-xs-4" id=wmul><%= link_to(image_tag("logo_avatar.png", class:"brands", id: "drop_image", title: "Home"), root_path) %></a>
+       <span class="navbar-toggler-icon">
+          <% if current_user %>
+            <%= image_tag(current_user.avatar, class: "img-nav", id: "avatar", title: "Menu") %>         
+          <% else %> 
+            <%= image_tag("welcome.png", class: "img-nav", id: "welcome", title: "Menu") %>
+          <% end %>
+        </span>
+
     </button>
     <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">Action</a>
-      <a class="dropdown-item" href="#">Another action</a>
-      <a class="dropdown-item" href="#">Something else here</a>
+      <% if current_user %>
+        <span style="color: #FBF5F5"><%= link_to "My Profile", '/profile', class:"dropdown-item" %></span>
+        <span style="color: #FBF5F5"><%= link_to "Find Salon", '/salons', class:"dropdown-item" %></span>
+          <% if can? :create, @salon %>
+            <%= link_to "List Salon", new_salon_path, class:"dropdown-item" %>
+          <% end %>
+            <span style="color: #FBF5F5"><%= link_to "Log Out", '/logout', class:"dropdown-item" %></span>  
+          <% else %>
+            <span style="color: #FBF5F5"><%= link_to "Sign in with Google", "/auth/google_oauth2", id: "sign_in", class:"dropdown-item" %></span>
+            <span style="color: #FBF5F5"><%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in", class:"dropdown-item" %></span>
+          <% end %>
     </div>
   </div>
 </nav>

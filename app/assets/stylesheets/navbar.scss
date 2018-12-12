@@ -47,6 +47,24 @@
    margin: 0;
 }
 
+#avatar {
+  width: 100%;
+  max-width: 80px;
+  height: 100%;
+  border: 1px solid white;
+  border-radius: 50%;
+  background: image-url('pattern.png');
+}
+
+#welcome{
+  width: 100%;
+  max-width: 80px;
+  height: 100%;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+
+
 /* ALERTS*/
 
 #alert {

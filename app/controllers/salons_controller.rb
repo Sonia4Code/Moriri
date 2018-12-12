@@ -11,7 +11,7 @@ class SalonsController < ApplicationController
 
   def create
     @salon = Salon.new(salon_params)
-    # @salon.user_id = current_user.id
+    @salon.user_id = current_user.id
       if @salon.save
         flash[:success] = 'You have successfully listed your services!'
         redirect_to @salon
