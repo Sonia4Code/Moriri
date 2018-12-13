@@ -3,7 +3,7 @@
       <div class="col-lg-3">  
         <div class="d-flex align-items-center align-content-stretch flex-wrap">
           <div class="card mt-2 text-center">
-            <div class="card-header"><%= link_to salon.business_name ,salon_path(salon) %></div>
+            <div class="card-header"><h2><%= link_to salon.business_name ,salon_path(salon) %></h2></div>
                <div class="card-body">
                 <p class="card-text"><%= label_tag :country, 'Country:' %> <%= salon.country %></p>
                 <p class="card-text"><%= label_tag :location, 'City / Town:' %> <%= salon.location %></p>

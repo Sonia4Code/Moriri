@@ -36,17 +36,24 @@ h2#salon-form-head {
 	text-shadow:-1px -1px 0 #0E2A36, 1px -1px 0 #0E2A36,-1px 1px 0 #0E2A36, 1px 1px 0 #0E2A36;
 }
 
+p.card-text {
+	font-family:  Work Sans, sans-serif ;
+	font-size: 1em;
+	vertical-align: middle;
+
+}
+
 .form_label {
 	text-align: right;
+	font-family:  Work Sans, sans-serif ;
 }
+
 
 label {
 	margin: 0 0 0 0;
 	color: #0E2A36;
 	font-weight: bold;
-	font-family: "Sans-serif", "Work Sans", serif;
-	font-size: 18px;
-	vertical-align: middle;
+	font-family: "Work Sans", serif;
 }
 
 div#new-salon{
@@ -80,6 +87,7 @@ div#show-salon.container-fluid {
 #map {
 	height: 550px;
 	width: 100%;
+	border-radius: 5px;
 }
 
 /* INDEX */
@@ -106,7 +114,6 @@ div.card{
 div.card-header {
 	border: solid 2px #0E2A36;
 	background: image-url('pattern.png');
-	border-radius: 5px;
 	color: white;
 	width: 100%;
 	text-align: center;

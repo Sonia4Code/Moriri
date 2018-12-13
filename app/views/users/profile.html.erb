@@ -1,0 +1,56 @@
+  <!-- CLIENT PROFILE -->
+<% if current_user.role == "client" %>
+  <div class="container-fluid" id="new-salon">
+    <div class="salon-header"> <h2 id="salon-form-head">Edit Your Details</h2> </div>
+    <p id = "image"><%= image_tag current_user.avatar, :class => 'avatar'%></p>
+    <h1 class = "profile"><strong><%= current_user.first_name %> <%= current_user.last_name %></strong></h1>
+    <p class = "mx-auto mt-0">Joined: <%= current_user.created_at.strftime("%B") %> <%= current_user.created_at.strftime("%Y") %> </p>
+    <div>
+        <div class = "row">
+          <div class = "col">
+            <%= form_for current_user do |f| %>
+            I own a salon / want to list my hair services:   
+          </div>
+          <div class = "col">
+            <%= f.label :role, 'Yes', :value => 'owner' %>
+            <%= f.radio_button :role, 'owner' %> 
+            <%= f.label :role, 'No', :value => 'client' %>
+            <%= f.radio_button :role, 'client' %> 
+          </div>
+          <div class = "col">
+            <%= f.submit "Update", class: "btn btn-large btn-dark" %>
+          </div>
+        <div>
+      <% end %>
+  </div>
+
+<% else %>
+
+<!-- OWNER PROFILE -->
+<div class="container-fluid" id="show-page">
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="profile-header"><h2 id="profile-form-head">My Profile</h2></div>
+      <p id = "image"><%= image_tag current_user.avatar, :class => 'avatar'%></p>
+      <h1 class = "profile"><strong><%= current_user.first_name %> <%= current_user.last_name %></strong></h1>
+      <p class = "mx-auto mt-0">Joined: <%= current_user.created_at.strftime("%B") %> <%= current_user.created_at.strftime("%Y") %> </p>
+    </div>
+    <div class="col-lg-6">
+      <div class="profile-header"><h2 id="profile-form-head">My Salons</h2></div> <br>
+          <div id="listed"><h2> You have listed the following salons: </h2>
+            <br>
+            <ul>
+              <% @salons.each do |salon| %>
+              <li id='salon-list'> 
+                <div class='row'>
+                  <div class='col'> <h5><%= salon.business_name %></h5></div> 
+                  <div class='col'><%= button_to "View", salon_path(salon), method: :get, :id => "view"  %><br></div>
+              <% end %>
+                </div>
+              </li>
+            </ul>
+          </div>
+              <% end %>
+        </div>
+  </div>
+</div>
