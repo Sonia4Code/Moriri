@@ -1,3 +1,9 @@
+div#profile {
+	text-align: center;
+	padding-bottom: 15vh;
+	padding-top: 12vh;
+}
+
 
 h2#profile-form-head {
 	border: solid 5px #0E2A36;
@@ -32,6 +38,18 @@ li#salon-list {
 	border: solid 1px grey;
 }
 
-#listed {
+div#listed {
 	text-align: center;
+
+}
+
+h5#listed {
+	font-style: italic;
+	color: #85929E;
+	margin-top: 0px;
+}
+
+button.btn.btn-primary {
+  background: #0E2A36;
+  border: none;
 }

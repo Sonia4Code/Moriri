@@ -45,9 +45,10 @@ h2#salon-form-head {
 
 label {
 	margin: 0 0 0 0;
-	color: #0E2A36;
+	color: #212F3C;
 	font-weight: bold;
 	font-family: "Work Sans", serif;
+	font-size: 15px;
 }
 
 div#new-salon{
@@ -132,7 +133,7 @@ a:visted {
 }
 
 a:hover {
-  color: none;
+	color: #0E2A36;
 }
 
 
@@ -158,5 +159,8 @@ li.page-item.active a.page-link {
   background-color: #0E2A36;
   color: white;
   border-color: #0E2A36;
-  
 }
+
+
+/* NEW SALON MODAL*/
+
