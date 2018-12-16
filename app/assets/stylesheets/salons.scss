@@ -1,0 +1,170 @@
+/* SEARCH */
+div.search {
+	text-align: center;
+	/*background: image-url('pattern.png'); */
+	/*border: solid 5px #0E2A36;*/
+}
+
+#search-form {
+	border-radius: 5px;
+	padding: 0;
+}
+
+.search_field {
+  border-radius: 5px;
+  max-width: 28vw;
+  width: 100%;
+}
+
+/* NEW FORM */
+#new-salon, #profile {
+	width: 55%;
+}
+
+h2#salon-form-head {
+	border: solid 5px #0E2A36;
+	background: image-url('pattern.png'); 
+	border-radius: 5px;
+	color: white;
+	width: 100%;
+	text-align: center;
+	padding-left: 0;
+	padding-right: 0;
+	font-family: 'Oswald',serif;
+	font-size: 2em;
+	color: white; 
+	text-shadow:-1px -1px 0 #0E2A36, 1px -1px 0 #0E2A36,-1px 1px 0 #0E2A36, 1px 1px 0 #0E2A36;
+}
+
+
+.form_label {
+	text-align: right;
+	font-family:  Work Sans, sans-serif ;
+}
+
+
+label {
+	margin: 0 0 0 0;
+	color: #212F3C;
+	font-weight: bold;
+	font-family: "Work Sans", serif;
+	font-size: 15px;
+}
+
+div#new-salon{
+	text-align: center;
+	padding-bottom: 15vh;
+	padding-top: 15vh;
+}
+
+div#speciality.form-row {
+	border: 5px black;
+}
+
+input.btn {
+	background-color: #0E2A36;
+	color: white;
+	border: solid 1px grey;
+	text-align: center;
+}
+
+/*SHOW PAGE*/
+div#show-page{
+	text-align: center;
+	padding-bottom: 15vh;
+	padding-top: 15vh;
+}
+
+div#show-salon.container-fluid {
+	padding-bottom: 15vh;
+	padding-top: 15vh;
+}
+
+#map {
+	height: 550px;
+	width: 100%;
+	border-radius: 5px;
+}
+
+/* INDEX */
+div#index.container-fluid {
+	padding-bottom: 5vh;
+	padding-top: 10vh;
+}
+
+a {
+	color: white;
+    text-decoration: underline;
+}
+
+p.card-text {
+	text-align: center;
+	font-family:  Work Sans, sans-serif ;
+	font-size: 1em;
+	vertical-align: middle;
+	margin-bottom: 10px;
+	margin-top: 0px;
+}
+
+div.card{
+	width: 360px;
+	height: 255px;
+	border: solid 2px #0E2A36;
+}
+div.card-body {
+	padding: 5px 0px 0px 0px;
+}
+
+div.card-header {
+	border: solid 2px #0E2A36;
+	background: image-url('pattern.png');
+	color: white;
+	width: 100%;
+	text-align: center;
+	padding: 0 0 0 0;
+	font-family: 'Oswald',serif;
+	font-size: 2em;
+	color: white; 
+	text-shadow:-1px -1px 0 #0E2A36, 1px -1px 0 #0E2A36,-1px 1px 0 #0E2A36, 1px 1px 0 #0E2A36;
+}
+
+
+a:visted {
+  color: #091a22;
+}
+
+a:hover {
+	color: #0E2A36;
+}
+
+
+
+/* PAGINATION */
+
+a.page-link {
+  background-color: white;
+  border: 0px;
+  color: #696969;
+  text-align: center;
+  text: 5px;
+  font-weight: bold;
+  border: solid 1px #0E2A36;
+}
+
+a.page-link:hover {
+  background-color: #0E2A36;
+  color: white;
+}
+
+li.page-item.active a.page-link {
+  background-color: #0E2A36;
+  color: white;
+  border-color: #0E2A36;
+}
+
+.btn-primary {
+	text-align: center;
+}
+
+/* NEW SALON MODAL*/
+

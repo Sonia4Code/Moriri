@@ -1,0 +1,72 @@
+  <!-- CLIENT PROFILE -->
+<% if current_user.role == "client" %>
+
+  <div class="container-fluid" id="profile">
+    <div class="salon-header"> <h2 id="salon-form-head">Edit Your Details</h2> </div>
+    <p id = "image"><%= image_tag current_user.avatar, :class => 'avatar'%></p>
+    <h1 class = "profile"><strong><%= current_user.first_name %> <%= current_user.last_name %></strong></h1>
+    <p class = "mx-auto mt-0">Joined: <%= current_user.created_at.strftime("%B") %> <%= current_user.created_at.strftime("%Y") %> </p>
+          <p>
+            <%= form_for current_user do |f| %>
+            <h5>I own a salon / want to list my hair services:</h5>   
+            <%= f.label :role, 'Yes', :value => 'owner' %>
+            <%= f.radio_button :role, 'owner' %> 
+            <%= f.label :role, 'No', :value => 'client' %>
+            <%= f.radio_button :role, 'client' %> 
+          </p>
+          <p>
+            <%= f.submit "Update Profile", class: "btn btn-large btn-dark" %>
+          </p>
+          <p class= 'show-button'><%= button_to "Go to Salons", '/salons', :method => "get", class: "btn" %></p>
+      <% end %>
+  </div>
+
+<% else %>
+
+<!-- OWNER PROFILE -->
+  <div class="container-fluid" id="profile">
+    <div class="profile-header"><h2 id="profile-form-head">My Profile</h2></div>
+      <p id = "image"><%= image_tag current_user.avatar, :class => 'avatar'%></p>
+      <h1 class = "profile"><strong><%= current_user.first_name %> <%= current_user.last_name %></strong></h1>
+      <p class = "mx-auto mt-0">Joined: <%= current_user.created_at.strftime("%B") %> <%= current_user.created_at.strftime("%Y") %> </p>
+    <div class="profile-header"><h2 id="profile-form-head">My Salons</h2></div>
+      <div id="listed"><h5 id='listed'> You have listed the following salons: </h5>
+        <ul> <% @salons.each do |salon| %>
+          <li id='salon-list'> 
+            <div class='row'>
+              <div class='col'> <%= salon.business_name %></div> 
+              <div class='col'><%= button_to "View", salon_path(salon), method: :get, :id => "view" %><br>
+            </div>
+          </li>
+          <% end %>
+        </ul>
+      <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#newSalonList">
+          List New Salon
+        </button>
+        <p class= 'show-button mt-0'><%= button_to "Find a Salon", '/salons', :method => "get", class: "btn" %></p>
+        <!-- Modal -->
+        <div class="modal fade-lg" id="newSalonList" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document" id="new-modal">
+            <div class="modal-content">
+              <div class="modal-body">
+                
+                <div class="salon-header">
+                  <h2 id="salon-form-head">List New Salon</h2>
+                </div>
+                 <%= form_for @salon do |f| %>
+                   <%= render partial: '/salons/form', :locals => {:f => f } %>  
+                   <div class= "submit mt-2"><%= f.submit "List Salon", class: "btn" %></div>
+                 <% end %>
+                 <br>
+                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<% end %>
+

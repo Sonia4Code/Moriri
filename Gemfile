@@ -36,11 +36,26 @@ gem 'jbuilder', '~> 2.5'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
+gem 'bcrypt', '~> 3.1', '>= 3.1.12'
+
+# user ability
+gem 'cancancan', '~> 2.0'
 
 #bootstrap
 gem 'bootstrap', '~> 4.1.3'
 
 gem 'jquery-rails'
+
+# privacy and omniauth
+gem "figaro"
+
+gem "omniauth"
+gem "omniauth-google-oauth2" 
+gem "omniauth-facebook" 
+
+# pagination
+gem 'kaminari'
+gem 'bootstrap4-kaminari-views'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
