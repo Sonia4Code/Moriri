@@ -6,9 +6,9 @@
             <div class="card-header"><h2><%= link_to salon.business_name ,salon_path(salon) %></h2></div>
                <div class="card-body">
                 <p class="card-text"><%= label_tag :country, 'Country:' %> <%= salon.country %></p>
-                <p class="card-text"><%= label_tag :location, 'City / Town:' %> <%= salon.location %></p>
+                <p class="card-text"><%= label_tag :location, 'City:' %> <%= salon.location %></p>
                 <p class="card-text"><%= label_tag :area, 'Area:' %> <%= salon.suburb %> </p>
-                <p class="card-text"><%= label_tag :speciality, 'Speciality:' %><br><%= salon.speciality * " ," %></p>
+                <p class="card-text"><%= label_tag :speciality, 'Speciality:' %><br><%= salon.speciality * " / " %></p>
               </div>
             </div>
           </div>

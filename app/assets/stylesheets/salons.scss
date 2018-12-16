@@ -17,7 +17,7 @@ div.search {
 }
 
 /* NEW FORM */
-#new-salon {
+#new-salon, #profile {
 	width: 55%;
 }
 
@@ -36,12 +36,6 @@ h2#salon-form-head {
 	text-shadow:-1px -1px 0 #0E2A36, 1px -1px 0 #0E2A36,-1px 1px 0 #0E2A36, 1px 1px 0 #0E2A36;
 }
 
-p.card-text {
-	font-family:  Work Sans, sans-serif ;
-	font-size: 1em;
-	vertical-align: middle;
-
-}
 
 .form_label {
 	text-align: right;
@@ -103,12 +97,20 @@ a {
 
 p.card-text {
 	text-align: center;
+	font-family:  Work Sans, sans-serif ;
+	font-size: 1em;
+	vertical-align: middle;
+	margin-bottom: 10px;
+	margin-top: 0px;
 }
 
 div.card{
-	width: 350px;
-	height: 280px;
+	width: 360px;
+	height: 255px;
 	border: solid 2px #0E2A36;
+}
+div.card-body {
+	padding: 5px 0px 0px 0px;
 }
 
 div.card-header {
@@ -130,7 +132,7 @@ a:visted {
 }
 
 a:hover {
-  color: #0E2A36;
+  color: none;
 }
 
 
