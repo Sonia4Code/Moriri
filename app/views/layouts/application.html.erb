@@ -37,9 +37,9 @@
       <% if current_user %>
         <span style="color: #FBF5F5"><%= link_to "My Profile", '/profile', class:"dropdown-item" %></span>
         <span style="color: #FBF5F5"><%= link_to "Find Salon", '/salons', class:"dropdown-item" %></span>
-          <% if can? :create, @salon %>
-            <%= link_to "List Salon", new_salon_path, class:"dropdown-item" %>
-          <% end %>
+          <%# if can? :create, @salon %>
+            <%#= link_to "List Salon", new_salon_path, class:"dropdown-item" %>
+          <%# end %>
             <span style="color: #FBF5F5"><%= link_to "Log Out", '/logout', class:"dropdown-item" %></span>  
           <% else %>
             <span style="color: #FBF5F5"><%= link_to "Sign in with Google", "/auth/google_oauth2", id: "sign_in", class:"dropdown-item" %></span>
