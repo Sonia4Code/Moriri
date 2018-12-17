@@ -1,18 +1,17 @@
 Rails.application.routes.draw do
-  post "salons/search" => "salons#search"
-  get "salons/search" => "salons#search"
 
   root 'welcome#index'
 
+  post "salons/search" => "salons#search"
+  get "salons/search" => "salons#search"
 
-  
-	get "/login" => "sessions#new"
-	post "/login" => "sessions#create"
-	get "/logout" => "sessions#destroy"
+  get "/login" => "sessions#new"
+  post "/login" => "sessions#create"
+  get "/logout" => "sessions#destroy"
 
-	get "/profile" => "users#profile", as: "profile"
+  get "/profile" => "users#profile", as: "profile"
 
-	resources :users
+  resources :users
 
   get "/profile/edit" => "users#edit", as: "edit_profile"
 

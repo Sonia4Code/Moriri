@@ -8,7 +8,7 @@
 	overflow:hidden;
 	height:100vh;
 	margin-bottom: -500px;
-	z-index: -1;
+	/*z-index: -1;*/
 	vertical-align: middle;
 }
 
@@ -20,4 +20,8 @@
 p#slogan {
 	padding: 0;
 	margin: 0;
+}
+
+search-front {
+	/*z-index: 3;*/
 }
