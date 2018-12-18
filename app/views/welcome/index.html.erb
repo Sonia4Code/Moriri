@@ -6,7 +6,7 @@
         <!-- SEARCH BOX -->
     <p>
        <%= form_tag(salons_search_path, id: "search-form", method: :post) do %>
-       <%= text_field_tag :location, params[:location], placeholder: ' Search Hair Services in your City', class:"search_field" %> 
+       <%= text_field_tag :location, params[:location], placeholder: ' Search for Hair Services in your City', class:"search_field" %> 
        <%= submit_tag "Find Salon", name: nil, class:"btn" %>
       <% end %>
     </p>
