@@ -1,8 +1,8 @@
 <!-- INDEX PAGE -->
 <div class="container-fluid align-items-center mx-auto" id="index">
-  <div class="container-fluid mb-2" id="search_row">
+  <div class="container-fluid mb-1" id="search_row">
     <div class="search mt-4">
-      <%= form_tag salons_search_path, id: "search-front", method: :post, remote: true do %>
+      <%= form_tag salons_search_path, id: "search-front", method: :get, remote: true do %>
        <%= text_field_tag :country, params[:country], placeholder: ' Country', class:"search_field" %> 
        <%= text_field_tag :location, params[:location], placeholder: ' City', class:"search_field" %> 
        <%= submit_tag "Search", name: nil, class:"btn" %>
@@ -10,7 +10,7 @@
     </div>
   </div>
   <!-- SEARCH RESULTS -->
-  <div class="container-fluid" id ="search_list" >
+  <div class="container-fluid mt-1" id ="search_list" >
     <%= render partial: '/salons/display', object: @salons %>
   </div>
     <div class= "page mt-4"><%= paginate @salons %></div>

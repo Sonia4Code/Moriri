@@ -141,6 +141,9 @@ a:hover {
 
 /* PAGINATION */
 
+#pagination {
+	height: 20px;
+}
 a.page-link {
   background-color: white;
   border: 0px;
@@ -165,6 +168,7 @@ li.page-item.active a.page-link {
 .btn-primary {
 	text-align: center;
 }
+
 
 /* NEW SALON MODAL*/
 

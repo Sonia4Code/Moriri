@@ -38,7 +38,7 @@ class SalonsController < ApplicationController
 
   def destroy
     @salon.destroy
-    redirect_to "/salons"
+    redirect_to "/profile"
   end
 
   def search
