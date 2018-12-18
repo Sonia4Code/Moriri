@@ -1,8 +1,0 @@
- <%= form_tag(salons_search_path, id: "search-form", method: :get) do %>
-    <%= text_field_tag 'location', nil, params[:location], placeholder: ' City' %>
-            <%= submit_tag 'Search', name: nil, class:"btn", id:"search_btn"%>
-         <% end %>
-
-
-<%= text_field_tag 'input_name', nil, placeholder: "Enter your name" %>
-<%= text_field_tag 'location', nil, params[:location], placeholder: ' City' %>
