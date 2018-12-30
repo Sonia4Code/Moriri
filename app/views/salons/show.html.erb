@@ -22,9 +22,11 @@
             <% end %>
             </p>
             <p class= 'show-button'>
-              <% if can? :destroy, @salon %><%= button_to "Delete", @salon, :method => "delete", class: "btn" %>
-              <% end %>
-              </p>
+
+              <% if can? :destroy, @salon %>
+              <%= button_to "Delete", @salon, :method => "delete", class: "btn" %></p>
+            <% end %>
+
             <p class= 'show-button'><%= button_to "All Salons", '/salons', :method => "get", class: "btn" %></p>
             </div>
              <!-- Modal -->
