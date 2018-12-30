@@ -39,7 +39,7 @@ class SessionsController < ApplicationController
         user = User.create_with_auth_and_hash(authentication, auth_hash)
         # you are expected to have a path that leads to a page for editing user details
         @next = root_url
-        flash[:success] = "Congratulations! You have successfully created a Moriri ccount"     
+        flash[:success] = "Congratulations! You have successfully created a Moriri account"     
         # @notice = "User created."
       end
 

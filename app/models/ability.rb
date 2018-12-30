@@ -6,6 +6,9 @@ class Ability
       
       if user.super_admin?
         can :manage, :all
+      elsif user.owner?
+        can :create, Salon
+        can :update,  Salon 
       else
         can :read, :all
         # can :create, Review
@@ -14,13 +17,11 @@ class Ability
       end
       if user.owner?
         can :create, Salon
-        can :update,  Salon do |salon|
+        can :update,  Salon 
+        can :destroy,  Salon
         # salon.try(:user) == user
-        end
-        can :destroy,  Salon do |salon|
-        # salon.try(:user) == user
-        end
+      end
         
-    end
+        
   end
 end
