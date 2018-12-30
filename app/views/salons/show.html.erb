@@ -15,11 +15,16 @@
 		        <p><%= label_tag :speciality, 'Speciality:' %> <%= @salon.speciality * "," %></p>
             <!-- Button Trigger Modal -->
             <p class= 'show-button'>
+            <% if can? :update, @salon %>
               <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editSalon">
                 Edit
               </button>
+            <% end %>
             </p>
-            <p class= 'show-button'><%= button_to "Delete", @salon, :method => "delete", class: "btn" %></p>
+            <p class= 'show-button'>
+              <% if can? :destroy, @salon %>
+              <%= button_to "Delete", @salon, :method => "delete", class: "btn" %></p>
+            <% end %>
             <p class= 'show-button'><%= button_to "All Salons", '/salons', :method => "get", class: "btn" %></p>
             </div>
              <!-- Modal -->
