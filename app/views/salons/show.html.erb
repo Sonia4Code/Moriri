@@ -27,10 +27,13 @@
             <% end %>
 
             <p class= 'show-button'><%= button_to "All Salons", '/salons', :method => "get", class: "btn" %></p>
+
+            <p class= 'show-button' ><%= link_to 'Back', :back , :style=>'color: #0E2A36;' %></p>
             </div>
+            
              <!-- Modal -->
             <div class="modal fade-lg" id="editSalon" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-              <div class="modal-dialog modal-lg" style="width:2000px;" role="document" id="new-modal">
+              <div class="modal-dialog modal-lg" role="document" id="new-modal">
                 <div class="modal-content">
                   <div class="modal-body">
                     <div class="salon-header">
