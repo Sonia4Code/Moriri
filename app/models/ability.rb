@@ -10,9 +10,6 @@ class Ability
         can [:create , :edit, :destroy, :update],  Salon , user: user
       else
         can :read, :all
-        # can :create, Review
-        # can :update, Review do |review|
-        #   review.try(:user) == user || user.role?(:client)
       end
         
   end
