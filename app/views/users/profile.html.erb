@@ -34,7 +34,7 @@
         <ul> <% @salons.each do |salon| %>
           <li id='salon-list'> 
             <div class='row'>
-              <div class='col'> <%= salon.business_name %></div> 
+              <div class='col' id='sal-name'> <%= salon.business_name %></div> 
               <div class='col'><%= button_to "View", salon_path(salon), method: :get, :id => "view" %><br>
             </div>
           </li>

@@ -17,8 +17,12 @@ div.search {
 }
 
 /* NEW FORM */
-#new-salon, #profile {
+#profile {
 	width: 55%;
+}
+
+#new-modal {
+	width: 500px;
 }
 
 h2#salon-form-head {
@@ -170,5 +174,10 @@ li.page-item.active a.page-link {
 }
 
 
+
+div.row {
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+}
 /* NEW SALON MODAL*/
 

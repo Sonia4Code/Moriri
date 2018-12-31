@@ -1,5 +1,5 @@
 class Salon < ApplicationRecord
-	has_one :user
+  has_one :user
 
   scope :country, -> (country) { where("country ILIKE ?", "%#{country}%") } 
   scope :location, -> (location) { where("location ILIKE ?", "%#{location}%") } 
@@ -8,3 +8,4 @@ class Salon < ApplicationRecord
   paginates_per 8
 
 end
+

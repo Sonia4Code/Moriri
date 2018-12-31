@@ -29,6 +29,8 @@ img.avatar {
 li#salon-list {
 	list-style: none;
 	text-align: center;
+	padding-bottom: 0;
+	margin-bottom: 0;
 }
 
 #view {
@@ -52,4 +54,8 @@ h5#listed {
 button.btn.btn-primary {
   background: #0E2A36;
   border: none;
+}
+
+#sal-name {
+	font-size: 1.3em;
 }
