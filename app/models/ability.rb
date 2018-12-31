@@ -7,7 +7,7 @@ class Ability
       if user.super_admin?
         can :manage, :all
       elsif user.owner?
-        can [:create , :edit, :destroy, :update],  Salon , user: user
+        can [:create ,:update, :edit, :destroy],  Salon , user: user
       else
         can :read, :all
       end
