@@ -6,12 +6,17 @@
 	 			<h2 id="salon-form-head"><%= @salon.business_name %></h2>
 			</div>   
         	<div class="info">
+            <p>
+              <%= link_to(image_tag("website.png"), "http://#{@salon.website}", { target: '_blank' }) if @salon.website.present? %>
+              <%= link_to(image_tag("facebook.png"), "http://#{@salon.facebook}", { target: '_blank' }) if @salon.facebook.present?  %>
+              <%= link_to(image_tag("instagram.png"), "http://#{@salon.instagram}", { target: '_blank' }) if @salon.instagram.present?  %>
+            </p>            
         		<p><%= label_tag :contact, 'Contact Number:' %> <%= @salon.contact %></p>
 		        <p><%= label_tag :contact_person, 'Contact Person:' %> <%= @salon.contact_person %></p>
 		        <p><%= label_tag :country, 'Country:' %> <%= @salon.country %></p>
 		        <p><%= label_tag :location, 'City / Town:' %> <%= @salon.location %> </p>
 		        <p><%= label_tag :area, 'Area:' %> <%= @salon.suburb %> </p>
-		        <p><%= label_tag :address, 'Address:' %> <%= @salon.address %> </p>
+            <p><%= label_tag :address, 'Address:' %> <%= @salon.address %> </p>
 		        <p><%= label_tag :speciality, 'Speciality:' %> <%= @salon.speciality * "," %></p>
             <!-- Button Trigger Modal -->
             <p class= 'show-button'>
