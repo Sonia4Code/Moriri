@@ -12,7 +12,7 @@
       <%= f.text_field  :contact_person, class: 'form-control', placeholder: 'Contact Person' %>
     </div>
   </div>
- 
+ <!-- Address -->
   <div class="form-row">
     <div class="form-group col-md-4">
       <%= label_tag :country, 'Country' %>
@@ -31,8 +31,22 @@
      <%= label_tag :address, 'Address' %>
       <%= f.text_field  :address, class: 'form-control', placeholder: 'Address' %>
   </div>
+  <!-- Social Media -->
+  <div class="form-row">
+    <div class="form-group col-md-4">
+     <%= label_tag :website, 'Website' %>
+      <%= f.text_field  :website, class: 'form-control', placeholder: 'wwww.salonwebsite.com' %>
+  </div>
+    <div class="form-group col-md-4">
+     <%= label_tag :facebook, 'Facebook' %>
+      <%= f.text_field  :facebook, class: 'form-control', placeholder: 'www.facebookpage.com' %>
+    </div>
+    <div class="form-group col-md-4">
+     <%= label_tag :instagram, 'Instagram' %>
+      <%= f.text_field  :instagram, class: 'form-control', placeholder: 'www.instagrampage.com' %>
+  </div>
+</div>
 <!-- Speciality -->
-
  <div class="form-row" id="speciality">
   <div class="form-group col-md-2">
       <%= label_tag :speciality, 'Speciality' %>
@@ -58,3 +72,7 @@
       'Locs
     </div>
   </div>
+    <div class="form-group">
+      <%= label_tag :description, 'Additional Details' %>
+      <%= f.text_field :description, class: 'form-control', placeholder: 'Describe what your salon offers in detail...' %>
+    </div>
