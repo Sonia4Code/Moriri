@@ -56,10 +56,16 @@ class SalonsController < ApplicationController
       end
   end
 
+  def insta
+    @insta = @salon.instafeed
+    @insta = @insta.gsub(/^(.{39,}?).*$/m,'\1/embed')
+  end
+    helper_method :insta
+
 private
 
   def salon_params
-    params.require(:salon).permit(:id, :page, :country, :location, :title, :description, :business_name, :contact,:contact_person, :suburb, :address, :facebook, :instagram, :website, speciality:[] )
+    params.require(:salon).permit(:id, :page, :country, :location, :title, :description, :business_name, :contact,:contact_person, :suburb, :address, :facebook, :instagram, :website, :instafeed, speciality:[])
   end
 
   def set_salon
@@ -67,7 +73,7 @@ private
   end
 
   def filtering_params(params)
-    params.slice(:country, :location, :suburb )
+    params.slice(:country, :location, :suburb, :instafeed)
   end
 
 
