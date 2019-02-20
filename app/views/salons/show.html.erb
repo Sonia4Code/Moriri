@@ -70,10 +70,10 @@
     <% if @salon.instafeed.present? %>
       <iframe width="300px" height="300px" style="height:100%;width:55%;" src="<%= insta %>" frameborder="0"></iframe>
     <% else %>
-    <div width="300px;" height="300px;">
-      <%= image_tag("instalogo.png") %>
-      <p style="font-style:italic;">No Shared Instagram Post yet...</p>
-    </div>
+      <div class="container-fluid mt-5 pt-5" width="300px;" height="300px;">
+        <p><%= image_tag("instalogo.png") %> </p>
+        <p style="font-style:italic;">No Shared Instagram Post yet...</p>
+      </div>
     <% end %>
     <!-- Instagram Modal -->
     <div class="modal fade" id="instafeed" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
