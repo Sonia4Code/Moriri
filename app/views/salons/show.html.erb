@@ -1,84 +1,96 @@
 <!-- SHOW PAGE -->
 <div class="container-fluid" id="show-page">
-    <div class="row">
-        <div class="col-lg-6">
-            <div class="salon-header">
-	 			<h2 id="salon-form-head"><%= @salon.business_name %></h2>
-			</div>   
-        	<div class="info">
-            <p>
-              <%= link_to(image_tag("website.png"), "http://#{@salon.website}", { target: '_blank' }) if @salon.website.present? %>
-              <%= link_to(image_tag("facebook.png"), "http://#{@salon.facebook}", { target: '_blank' }) if @salon.facebook.present?  %>
-              <%= link_to(image_tag("instagram.png"), "http://#{@salon.instagram}", { target: '_blank' }) if @salon.instagram.present?  %>
-            </p>            
-        		<p><%= label_tag :contact, 'Contact Number:' %> <%= @salon.contact %></p>
-		        <p><%= label_tag :contact_person, 'Contact Person:' %> <%= @salon.contact_person %></p>
-		        <p><%= label_tag :country, 'Country:' %> <%= @salon.country %></p>
-		        <p><%= label_tag :location, 'City / Town:' %> <%= @salon.location %> </p>
-		        <p><%= label_tag :area, 'Area:' %> <%= @salon.suburb %> </p>
-            <p><%= label_tag :address, 'Address:' %> <%= @salon.address %> </p>
-		        <p><%= label_tag :speciality, 'Speciality:' %> <%= @salon.speciality * "," %></p>
-            <!-- Button Trigger Modal -->
-            <p class= 'show-button'>
-            <% if can? :update, @salon %>
-              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editSalon">
-                Edit
-              </button>
-            <% end %>
-            </p>
-            <p class= 'show-button'>
-              <% if can? :destroy, @salon %>
-              <%= button_to "Delete", @salon, :method => "delete", class: "btn" %></p>
-            <% end %>
-
-            <p class= 'show-button'><%= button_to "All Salons", '/salons', :method => "get", class: "btn" %></p>
-
-            <p class= 'show-button' ><%= link_to 'Back', :back , :style=>'color: #0E2A36;' %></p>
-            </div>
-            
-             <!-- Modal -->
-            <div class="modal fade-lg" id="editSalon" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-              <div class="modal-dialog modal-lg" role="document" id="new-modal">
-                <div class="modal-content">
-                  <div class="modal-body">
-                    <div class="salon-header">
-                      <h2 id="salon-form-head">Edit Salon</h2>
-                    </div>
-                     <%= form_for @salon do |f| %>
-                       <%= render partial: '/salons/form', :locals => {:f => f } %>  
-                       <div class= "submit mt-2"><%= f.submit "Update", class: "btn" %></div>
-                     <% end %>
-                     <br>
-                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                  </div>
-                </div>
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="salon-header">
+			 <h2 id="salon-form-head"><%= @salon.business_name %></h2>
+	    </div>   
+    	<div class="info">
+        <p>
+          <%= link_to(image_tag("website.png"), "http://#{@salon.website}", { target: '_blank' }) if @salon.website.present? %>
+          <%= link_to(image_tag("facebook.png"), "http://#{@salon.facebook}", { target: '_blank' }) if @salon.facebook.present?  %>
+          <%= link_to(image_tag("instagram.png"), "http://#{@salon.instagram}", { target: '_blank' }) if @salon.instagram.present?  %>
+        </p>            
+    		<p><%= label_tag :contact, 'Contact Number:' %> <%= @salon.contact %></p>
+        <p><%= label_tag :contact_person, 'Contact Person:' %> <%= @salon.contact_person %></p>
+        <p><%= label_tag :country, 'Country:' %> <%= @salon.country %></p>
+        <p><%= label_tag :location, 'City / Town:' %> <%= @salon.location %> </p>
+        <p><%= label_tag :area, 'Area:' %> <%= @salon.suburb %> </p>
+        <p><%= label_tag :address, 'Address:' %> <%= @salon.address %> </p>
+        <p><%= label_tag :speciality, 'Speciality:' %> <%= @salon.speciality * "," %></p>
+        <!-- Button Trigger Modal -->
+        <p class= 'show-button'>
+          <% if can? :update, @salon %>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editSalon">
+            Edit</button>
+          <% end %>
+        </p>
+        <p class= 'show-button'>
+          <% if can? :destroy, @salon %>
+            <%= button_to "Delete", @salon, :method => "delete", class: "btn" %></p>
+          <% end %>
+        <p class= 'show-button'><%= button_to "All Salons", '/salons', :method => "get", class: "btn" %></p>
+        <p class= 'show-button' ><%= link_to 'Back', :back , :style=>'color: #0E2A36;' %></p>
+      </div>
+         <!--  Edit Modal -->
+      <div class="modal fade-lg" id="editSalon" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document" id="new-modal">
+          <div class="modal-content">
+            <div class="modal-body">
+              <div class="salon-header">
+                <h2 id="salon-form-head">Edit Salon</h2>
               </div>
+               <%= form_for @salon do |f| %>
+                <%= render partial: '/salons/form', :locals => {:f => f } %>  
+                  <div class= "submit mt-2"><%= f.submit "Update", class: "btn" %></div>
+               <% end %>
+               <br>
+               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
             </div>
+          </div>
         </div>
-        <div class="col-lg-6">
-             <div id="map" class="wrapper-xs"></div>
+      </div>
+    </div>
+    <!-- INSTAGRAM -->
+
+    <div class="col-lg-6">
+      <div class="salon-header">
+        <h2 id="salon-form-head">
+          Showcase Gallery
+        </h2>
+      </div> 
+      <!-- Button trigger modal -->
+      <div>
+        <% if can? :update, @salon %>
+          <p><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#instafeed" title="Show case your work by sharing a multiphoto Instagram post")>Instagram+ </button></p>
+        <% end %>
+      </div>
+      <!-- iFRAME -->
+
+    <iframe width="300px" height="300px" style="height:100%;width:55%;" src="<%= insta %>" frameborder="0"></iframe>
+    <!-- Instagram Modal -->
+    <div class="modal fade" id="instafeed" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Share showcase Instagram Post to Salon Profile</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <%= form_for @salon do |f| %>
+              <div class="form-group">
+                <%= label_tag :instafeed, 'Add Instagram Post' %>
+                <%= f.text_field  :instafeed, class: 'form-control', placeholder: 'Copy and paste a multi photo Instagram link' %>
+                </div>
+                <div class= "submit mt-2"><%= f.submit "Save", class: "btn" %></div>
+             <% end %>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
         </div>
     </div>
+  </div>
 </div>
-       
-
-<script type="text/javascript">
-  function initMap() {
-    var geocoder = new google.maps.Geocoder();
-    geocoder.geocode({"address":"<%=@salon.address%><%=@salon.location%>"}, function(result, status){
-      var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 4, 
-        center: result[0].geometry.location
-      })
-      var marker = new google.maps.Marker({
-        position: result[0].geometry.location,
-        map: map
-      });
-    })
-  }
-</script>
-
-  <script async defer
-  src="https://maps.googleapis.com/maps/api/js?key=<%=ENV['GOOGLE_API_KEY']%>&callback=initMap">
-</script>
-  
