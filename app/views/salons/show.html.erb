@@ -7,9 +7,9 @@
 	    </div>   
     	<div class="info">
         <p>
-          <%= link_to(image_tag("website.png"), "http://#{@salon.website}", { target: '_blank' }) if @salon.website.present? %>
-          <%= link_to(image_tag("facebook.png"), "http://#{@salon.facebook}", { target: '_blank' }) if @salon.facebook.present?  %>
-          <%= link_to(image_tag("instagram.png"), "http://#{@salon.instagram}", { target: '_blank' }) if @salon.instagram.present?  %>
+          <%= link_to(image_tag("website.png"), "#{@salon.website}", { target: '_blank' }) if @salon.website.present? %>
+          <%= link_to(image_tag("facebook.png"), "#{@salon.facebook}", { target: '_blank' }) if @salon.facebook.present?  %>
+          <%= link_to(image_tag("instagram.png"), "#{@salon.instagram}", { target: '_blank' }) if @salon.instagram.present?  %>
         </p>            
     		<p><%= label_tag :contact, 'Contact Number:' %> <%= @salon.contact %></p>
         <p><%= label_tag :contact_person, 'Contact Person:' %> <%= @salon.contact_person %></p>
@@ -62,19 +62,20 @@
       <!-- Button trigger modal -->
       <div>
         <% if can? :update, @salon %>
-          <p><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#instafeed" title="Show case your work by sharing a multiphoto Instagram post")>Instagram+ </button></p>
+          <p id='instabutton'><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#instafeed" title="Show case your work by sharing a multiphoto Instagram post")>Instagram+ </button></p>
         <% end %>
       </div>
       <!-- iFRAME -->
-
-    <% if @salon.instafeed.present? %>
-      <iframe width="300px" height="300px" style="height:100%;width:55%;" src="<%= insta %>" frameborder="0"></iframe>
-    <% else %>
-    <div width="300px;" height="300px;">
-      <%= image_tag("instalogo.png") %>
-      <p style="font-style:italic;">No Shared Instagram Post yet...</p>
-    </div>
-    <% end %>
+      <div class='iframe-holder'>
+        <% if @salon.instafeed.present? %>
+          <iframe width="300px" height="300px" style="height:100%;width:55%;" src="<%= insta %>" frameborder="0"></iframe>
+        <% else %>
+        <div width="300px;" height="300px;">
+          <%= image_tag("instalogo.png") %>
+          <p style="font-style:italic;">No Shared Instagram Post yet...</p>
+        </div>
+        <% end %>
+      </div>
     <!-- Instagram Modal -->
     <div class="modal fade" id="instafeed" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">

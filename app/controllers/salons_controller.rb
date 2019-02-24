@@ -48,7 +48,7 @@ class SalonsController < ApplicationController
         if @salons.empty?
           flash.now[:notice] = "Sorry there are no results for your search. Try again."
         end
-        @salons = @salons.page(params[:page])
+        @salons = @salons.page(params[:page]).order(created_at: :desc)
         respond_to do |format|
           format.js
           format.html {render "index"}
