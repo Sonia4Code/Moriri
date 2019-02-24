@@ -22,7 +22,6 @@ div.search {
 }
 
 
-
 h2#salon-form-head {
 	border: solid 5px #0E2A36;
 	background: image-url('pattern.png'); 
@@ -73,13 +72,13 @@ input.btn {
 /*SHOW PAGE*/
 div#show-page{
 	text-align: center;
-	padding-bottom: 15vh;
-	padding-top: 15vh;
+	padding-bottom: 10vh;
+	padding-top: 10vh;
 }
 
 div#show-salon.container-fluid {
-	padding-bottom: 15vh;
-	padding-top: 15vh;
+	padding-bottom: 10vh;
+	padding-top: 10vh;
 }
 
 #map {
@@ -178,4 +177,22 @@ div.row {
 /* NEW SALON MODAL*/
 
 
+.iframe-holder {
+  padding-bottom: 75%;
+  padding-top: 0px;
+  height: 0;
+  overflow: hidden;
+}
 
+.iframe-holder iframe,
+.iframe-holder object,
+.iframe-holder embed {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  bottom: 0;
+  outline: 0;
+}
