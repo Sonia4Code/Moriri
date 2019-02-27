@@ -18,6 +18,7 @@
         <p><%= label_tag :area, 'Area:' %> <%= @salon.suburb %> </p>
         <p><%= label_tag :address, 'Address:' %> <%= @salon.address %> </p>
         <p><%= label_tag :speciality, 'Speciality:' %> <%= @salon.speciality * "," %></p>
+        <p><h7 class="listed"><%= @salon.description %></h7></p>
         <!-- Button Trigger Modal -->
         <p class= 'show-button'>
           <% if can? :update, @salon %>
@@ -62,7 +63,7 @@
       <!-- Button trigger modal -->
       <div>
         <% if can? :update, @salon %>
-          <p id='instabutton'><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#instafeed" title="Show case your work by sharing a multiphoto Instagram post")>Instagram+ </button></p>
+          <p id='instabutton'><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#instafeed" title="Show case your work by sharing a multiphoto Instagram post")>Instagram + </button></p>
         <% end %>
       </div>
       <!-- iFRAME -->
@@ -71,8 +72,8 @@
         <iframe width="300px" height="300px" style="height:100%;width:55%;" src="<%= insta %>" frameborder="0"></iframe>
       <% else %>
         <div class="container-fluid mt-5 pt-5" width="300px;" height="300px;">
-          <p><%= image_tag("instalogo.png") %> </p>
-          <p style="font-style:italic;">No Shared Instagram Post yet...</p>
+          <%= image_tag("instalogo.png") %> 
+          <h5 class="listed">No Shared Instagram Post yet...</h5>
         </div>
       <% end %>
       </div>
