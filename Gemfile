@@ -42,7 +42,7 @@ gem 'bcrypt', '~> 3.1', '>= 3.1.12'
 gem 'cancancan', '~> 2.0'
 
 #bootstrap
-gem 'bootstrap', '~> 4.1.3'
+gem "bootstrap", ">= 4.3.1"
 
 gem 'jquery-rails'
 
