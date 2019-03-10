@@ -17,16 +17,23 @@
           <p>
             <%= f.submit "Update Profile", class: "btn btn-large btn-dark" %>
           </p>
-          <p class= 'show-button'><%= button_to "Go to Salons", '/salons', :method => "get", class: "btn" %></p>
+          <p class= 'show-button'><%= link_to "<button>All Salons</button>".html_safe, salons_path, :method => "get", class: "btn" %>
+            </p>
+          </p>
       <% end %>
-  </div>
+  </div> 
 
 <% else %>
 
 <!-- OWNER PROFILE -->
   <div class="container-fluid" id="profile">
     <div class="profile-header"><h2 id="profile-form-head">My Profile</h2></div>
-      <p id = "image"><%= image_tag current_user.avatar, :class => 'avatar'%></p>
+      <p id = "image">
+      <% if current_user.avatar.present? %>
+        <%= image_tag current_user.avatar, :class => 'avatar'%>
+      <% else %>
+      <% end %>
+      </p>
       <h1 class = "profile"><strong><%= current_user.first_name %> <%= current_user.last_name %></strong></h1>
       <p class = "mx-auto mt-0">Joined: <%= current_user.created_at.strftime("%B") %> <%= current_user.created_at.strftime("%Y") %> </p>
     <div class="profile-header"><h2 id="profile-form-head">My Salons</h2></div>
