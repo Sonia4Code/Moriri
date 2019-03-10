@@ -62,11 +62,19 @@ div#speciality.form-row {
 	border: 5px black;
 }
 
-input.btn {
+input.btn, button {
 	background-color: #0E2A36;
 	color: white;
 	border: solid 1px grey;
 	text-align: center;
+}
+
+a.btn {
+	border: none;
+}
+
+input#description.form-control {
+	height: 70px;
 }
 
 /*SHOW PAGE*/
@@ -175,6 +183,7 @@ div.row {
 	margin-bottom: 0px;
 }
 /* NEW SALON MODAL*/
+
 
 
 .iframe-holder {
