@@ -15,6 +15,13 @@ class WelcomeController < ApplicationController
 	      format.html {render "index"}
 	    end
 	  end
+
+
+	def about
+	    @about = @welcome.about
+  	end
+    	helper_method :about
+
 end
 
 private
