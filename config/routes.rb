@@ -21,6 +21,7 @@ Rails.application.routes.draw do
 
   get "/auth/:provider/callback" => "sessions#create_from_omniauth"
   get "/auth/facebook" => "sessions#create_from_omniauth"
+  get "/auth/facebook/callback" => "sessions#create_from_omniauth"
 
 
   resources :salons
