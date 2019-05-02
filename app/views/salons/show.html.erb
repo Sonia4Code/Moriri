@@ -28,8 +28,9 @@
         </p>
         <p class= 'show-button'>
           <% if can? :destroy, @salon %>
-            <%= button_to "Delete", @salon, :method => "delete", class: "btn" %></p>
+            <%= button_to "Delete", @salon, :method => "delete", data: {confirm: "Are you sure?"}, class: "btn" %>
           <% end %>
+        </p>
         <p class= 'show-button'><%= button_to "All Salons", '/salons', :method => "get", class: "btn" %></p>
         <p class= 'show-button' ><%= link_to 'Back', :back , :style=>'color: #0E2A36;' %></p>
       </div>
