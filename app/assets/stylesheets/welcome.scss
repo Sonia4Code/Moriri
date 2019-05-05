@@ -40,7 +40,6 @@ h2#about-form-head {
 	background: image-url('pattern.png'); 
 	border-radius: 5px;
 	color: white;
-	width: 100%;
 	text-align: center;
 	padding-left: 0;
 	padding-right: 0;
@@ -48,7 +47,6 @@ h2#about-form-head {
 	font-size: 2em;
 	color: white; 
 	text-shadow:-1px -1px 0 #0E2A36, 1px -1px 0 #0E2A36,-1px 1px 0 #0E2A36, 1px 1px 0 #0E2A36;
-	width: 100%;
 }
 
 p#about {
@@ -57,4 +55,9 @@ p#about {
 
 a#about {
 	color: #0E2A36;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
 }
