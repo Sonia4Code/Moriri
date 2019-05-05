@@ -58,7 +58,11 @@
             <div class="modal-content">
               <div class="modal-body">
                 <div class="salon-header">
-                  <h2 id="salon-form-head">List New Salon</h2>
+                  <h2 id="salon-form-head">
+                    List New Salon
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </h2>
                 </div>
                  <%= form_for @salon do |f| %>
                    <%= render partial: '/salons/form', :locals => {:f => f } %>  
