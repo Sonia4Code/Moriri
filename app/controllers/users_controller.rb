@@ -39,6 +39,8 @@ end
   end
 
   def destroy
+    @user.destroy
+    redirect_to '/'
   end
 
   

@@ -2,7 +2,7 @@
 <% if current_user.role == "client" %>
 
   <div class="container-fluid" id="profile">
-    <div class="salon-header"> <h2 id="salon-form-head">Edit Your Details</h2> </div>
+    <div class="salon-header"> <h2 id="salon-form-head">Edit Details</h2> </div>
     <p id = "image"><%= image_tag current_user.avatar, :class => 'avatar'%></p>
     <h1 class = "profile"><strong><%= current_user.first_name %> <%= current_user.last_name %></strong></h1>
     <p class = "mx-auto mt-0">Joined: <%= current_user.created_at.strftime("%B") %> <%= current_user.created_at.strftime("%Y") %> </p>
@@ -36,7 +36,7 @@
       </p>
       <h1 class = "profile"><strong><%= current_user.first_name %> <%= current_user.last_name %></strong></h1>
       <p class = "mx-auto mt-0">Joined: <%= current_user.created_at.strftime("%B") %> <%= current_user.created_at.strftime("%Y") %> </p>
-    <div class="profile-header"><h2 id="profile-form-head">My Salons</h2></div>
+    <div class="profile-header"><h2 id="profile-form-head">My Salon(s)</h2></div>
       <div id="listed"><h5 class ='listed'> You have listed the following salons: </h5>
         <ul> <% @salons.each do |salon| %>
           <li id='salon-list'> 
@@ -57,7 +57,6 @@
           <div class="modal-dialog modal-lg" role="document" id="new-modal">
             <div class="modal-content">
               <div class="modal-body">
-                
                 <div class="salon-header">
                   <h2 id="salon-form-head">List New Salon</h2>
                 </div>

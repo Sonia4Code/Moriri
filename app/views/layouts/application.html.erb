@@ -33,15 +33,15 @@
 
         </button>
         <div class="dropdown-menu">
-            <span style="color: #FBF5F5"><%= link_to "About", '/about', class:"dropdown-item" %></span>          
+            <span style="color: #0E2A36"><%= link_to "About", '/about', class:"dropdown-item" %></span>          
           <% if current_user %>
-            <span style="color: #FBF5F5"><%= link_to "My Profile", '/profile', class:"dropdown-item" %></span>
-            <span style="color: #FBF5F5"><%= link_to "Find Salon", '/salons', class:"dropdown-item" %></span>
-                <span style="color: #FBF5F5"><%= link_to "Log Out", '/logout', class:"dropdown-item" %></span>  
+            <span style="color: #0E2A36"><%= link_to "My Profile", '/profile', class:"dropdown-item" %></span>
+            <span style="color: #0E2A36"><%= link_to "Find Salon", '/salons', class:"dropdown-item" %></span>
+                <span style="color: #0E2A36"><%= link_to "Log Out", '/logout', class:"dropdown-item" %></span>  
               <% else %>
-                <span style="color: #FBF5F5"><%= link_to "Find Salon", '/salons', class:"dropdown-item" %></span>
-                <span style="color: #FBF5F5"><%= link_to "Sign in with Google", "/auth/google_oauth2", id: "sign_in", class:"dropdown-item" %></span>
-                <!-- <span style="color: #FBF5F5"><%#= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in", class:"dropdown-item" %></span> -->
+                <span style="color: #0E2A36"><%= link_to "Find Salon", '/salons', class:"dropdown-item" %></span>
+                <span style="color: #0E2A36"><%= link_to "Sign in with Google", "/auth/google_oauth2", id: "sign_in", class:"dropdown-item" %></span>
+                <!-- <span style="color: #0E2A36"><%#= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in", class:"dropdown-item" %></span> -->
               <% end %>
         </div>
       </div>
@@ -54,7 +54,7 @@
   <%= yield %>
 
 <div class="footer">
-  <div class="row justify-content-md-center"">
+  <div class="row justify-content-md-center">
     <div class="col"></div>
    <div class="col"><p id="foot">© Moriri 2019</p></div>
     <div class="col"></div>
