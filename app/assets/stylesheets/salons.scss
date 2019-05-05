@@ -176,6 +176,10 @@ a.page-link:hover {
   color: white;
 }
 
+a:visited {
+	color: #808080;
+}
+
 li.page-item.active a.page-link {
   background-color: #0E2A36;
   color: white;
